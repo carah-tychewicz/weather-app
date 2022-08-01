@@ -24,12 +24,13 @@ const CurrentWeather = () => {
   const toFahrenheit = (kel) => {
     const fahrenheit = (kel - 273.15) * 9 / 5 + 32;
     console.log(fahrenheit);
-    return fahrenheit;
+    const fRounded = fahrenheit.toFixed(0);
+    return fRounded;
   }
 
   return (
     <div className="container">
-      {weather ? <p>{weather.main.temp}</p> : ''}
+      {weather ? <p>{toFahrenheit(weather.main.temp)}</p> : ''}
     </div>
   )
 }
