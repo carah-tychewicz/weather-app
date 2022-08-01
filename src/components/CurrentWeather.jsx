@@ -13,7 +13,6 @@ const CurrentWeather = () => {
         const response = await fetch(url);
         const currentWeather = await response.json();
         setWeather(currentWeather);
-        console.log(weather);
       } catch(err) {
         console.log("ya dun goofed", err)
       }
@@ -27,18 +26,10 @@ const CurrentWeather = () => {
     console.log(fahrenheit);
     return fahrenheit;
   }
-  
-  
+
   return (
     <div className="container">
-      {
-        !weather ? 'loading'
-          :
-            <div>
-              
-              <p>{weather.main.feels_like}</p>
-            </div>
-        }
+      {weather ? <p>{weather.main.temp}</p> : ''}
     </div>
   )
 }
