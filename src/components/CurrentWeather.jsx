@@ -21,16 +21,18 @@ const CurrentWeather = () => {
     getWeather();
   }, []);
 
-  const toFahrenheit = (kel) => {
-    const fahrenheit = (kel - 273.15) * 9 / 5 + 32;
-    console.log(fahrenheit);
-    const fRounded = fahrenheit.toFixed(0);
-    return fRounded;
-  }
+  
+ 
+
+  // const toFahrenheit = (kel) => {
+  //   const fahrenheit = (kel - 273.15) * 9 / 5 + 32;
+  //   const fRounded = fahrenheit.toFixed(0);
+  //   return fRounded;
+  // }
 
   return (
     <div className="container">
-      {weather ? <p>{toFahrenheit(weather.main.temp)}</p> : ''}
+     
     </div>
   )
 }
