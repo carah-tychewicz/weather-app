@@ -37,6 +37,11 @@ const CurrentWeather = () => {
           forecast ? 
           <div className="weather-forecast">
             <p>{forecast.main.temp}</p>
+            <p>{forecast.weather[0].main}</p>
+            <p>{forecast.main.feels_like}</p>
+            <p>{forecast.main.temp_min}</p>
+            <p>{forecast.main.temp_max}</p>
+            <p>{forecast.main.humidity}</p>
           </div> 
           : ''
           }
