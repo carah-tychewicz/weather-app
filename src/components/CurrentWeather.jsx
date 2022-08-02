@@ -21,6 +21,27 @@ const CurrentWeather = () => {
     getWeather();
   }, []);
 
+  const toFahrenheit = (kel) => {
+    const fahrenheit = (kel - 273.15) * 9 / 5 + 32;
+    const fRounded = fahrenheit.toFixed(0);
+    return fRounded;
+  }
+
+  const tempArr = forecast ?  {temp: forecast.main.temp, feelsLike: forecast.main.feels_like} : '';
+  console.log(tempArr);
+  const tempConverter = () => {
+    let convertedTempObj = {};
+    let i = 0;
+    while (i < tempArr.length) {
+      
+      i++
+    }
+    console.log(convertedTempObj);
+    return convertedTempObj;
+  }
+
+  tempConverter();
+
   return (
     <div className="container">
       <div className="weather-card">
