@@ -37,9 +37,9 @@ const CurrentWeather = () => {
           <p>test</p>
           { 
             Object.keys(forecast).map((item, i) => (
-                <li className="travelcompany-input" key={i}>
+                <div className="travelcompany-input" key={i}>
                     <span className="input-label">{ forecast.weather[0].main }</span>
-                </li>
+                </div>
             ))
           }  
         </div>
