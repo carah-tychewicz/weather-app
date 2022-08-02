@@ -21,11 +21,27 @@ const CurrentWeather = () => {
     getWeather();
   }, []);
 
-  // const toFahrenheit = (kel) => {
-  //   const fahrenheit = (kel - 273.15) * 9 / 5 + 32;
-  //   const fRounded = fahrenheit.toFixed(0);
-  //   return fRounded;
-  // }
+  const toFahrenheit = (kel) => {
+    const fahrenheit = (kel - 273.15) * 9 / 5 + 32;
+    const fRounded = fahrenheit.toFixed(0);
+    return fRounded;
+  }
+
+  const tempArr = forecast ?  {currentTemp: forecast.main.temp, feelsLike: forecast.main.feels_like} : '';
+  console.log(tempArr);
+  const convertedTempArr = {};
+  const tempConverter = () => {
+    let i = 0;
+    while (i < tempArr.length) {
+      convertedTempArr.push(toFahrenheit(tempArr[i]))
+      i++
+    }
+    console.log(convertedTempArr);
+    return convertedTempArr;
+  }
+
+  tempConverter();
+  
 
   return (
     <div className="container">
@@ -36,7 +52,7 @@ const CurrentWeather = () => {
         {
           forecast ? 
           <div className="weather-forecast">
-            <p>{forecast.main.temp}° {forecast.weather[0].main}</p>
+            <p>{convertedTempArr[currentTemp]}° {forecast.weather[0].main}</p>
             <p>Feels like {forecast.main.feels_like}°</p>
             <p>Min Temp: {forecast.main.temp_min}° | Max Temp: {forecast.main.temp_max}°</p>
             <p>{forecast.main.humidity}%</p>
