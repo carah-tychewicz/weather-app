@@ -1,7 +1,11 @@
-body {
-  margin: 0;
+html {
+  height: 100%;
 }
 
-html {
+body {
   background-image: linear-gradient(skyblue, antiquewhite);
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
