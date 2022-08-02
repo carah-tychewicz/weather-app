@@ -30,7 +30,9 @@ const CurrentWeather = () => {
   return (
     <div className="container">
       <div className="weather-card">
-        <p>test</p>
+        <div className="title">
+          <h3>Today's Forecast</h3>
+        </div>
       </div>
     </div>
   )
