@@ -27,10 +27,7 @@ const CurrentWeather = () => {
     return fRounded;
   }
 
-  const tempArr = forecast ?  {temp: forecast.main.temp, feelsLike: forecast.main.feels_like} : '';
-  console.log(tempArr);
-  const tempConverter = () => {
-    let convertedTempObj = {};
+  const tempConverter = (tempArr) => {
     let i = 0;
     while (i < tempArr.length) {
       
@@ -40,7 +37,10 @@ const CurrentWeather = () => {
     return convertedTempObj;
   }
 
-  tempConverter();
+  const temperatureArr = forecast ?  {temp: forecast.main.temp, feelsLike: forecast.main.feels_like} : '';
+  console.log(tempArr);
+
+  tempConverter(temperatureArr);
 
   return (
     <div className="container">
