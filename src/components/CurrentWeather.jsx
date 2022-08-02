@@ -33,11 +33,13 @@ const CurrentWeather = () => {
         <div className="title">
           <h3>Today's Forecast</h3>
         </div>
-        <div className="weather-forecast">
-          <p>test</p>
-          <p>{forecast.visibility}</p>
-          <p>{forecast.main.temp}</p>
-        </div>
+        {
+          forecast ? 
+          <div className="weather-forecast">
+            <p>{forecast.main.temp}</p>
+          </div> 
+          : ''
+          }
       </div>
     </div>
   )
