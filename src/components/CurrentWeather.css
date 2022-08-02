@@ -5,7 +5,8 @@
 }
 
 .weather-card {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  outline: solid 1px white;
   border-radius: 20px;
   height: 40rem;
   width: 30rem;
