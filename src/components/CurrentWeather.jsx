@@ -26,21 +26,24 @@ const CurrentWeather = () => {
     const fRounded = fahrenheit.toFixed(0);
     return fRounded;
   }
+  
+  let tempsFahrenheit = {};
 
   const tempConverter = (tempArr) => {
-    let i = 0;
-    while (i < tempArr.length) {
-      
-      i++
-    }
-    console.log(convertedTempObj);
-    return convertedTempObj;
+    Object.entries(tempArr).forEach(([key, value]) => {
+      tempsFahrenheit[key] = toFahrenheit(value);
+    })
   }
 
-  const temperatureArr = forecast ?  {temp: forecast.main.temp, feelsLike: forecast.main.feels_like} : '';
-  console.log(tempArr);
-
-  tempConverter(temperatureArr);
+  const tempsKelvin = forecast ? 
+  {
+    currentTemp: forecast.main.temp, 
+    feelsLike: forecast.main.feels_like, 
+    minTemp: forecast.main.temp_min, 
+    maxTemp: forecast.main.temp_max
+  } : {};
+  
+  tempConverter(tempsKelvin);
 
   return (
     <div className="container">
@@ -51,10 +54,10 @@ const CurrentWeather = () => {
         {
           forecast ? 
           <div className="weather-forecast">
-            <p>{}° {forecast.weather[0].main}</p>
-            <p>Feels like {forecast.main.feels_like}°</p>
-            <p>Min Temp: {forecast.main.temp_min}° | Max Temp: {forecast.main.temp_max}°</p>
-            <p>{forecast.main.humidity}%</p>
+            <p>{tempsFahrenheit.currentTemp}° {forecast.weather[0].main}</p>
+            <p>Feels like {tempsFahrenheit.feelsLike}°</p>
+            <p>Min Temp: {tempsFahrenheit.minTemp}° | Max Temp: {tempsFahrenheit.maxTemp}°</p>
+            <p>Humidity: {forecast.main.humidity}%</p>
           </div> 
           : ''
           }
