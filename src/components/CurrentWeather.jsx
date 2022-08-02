@@ -3,6 +3,15 @@ import { url } from '../config.js';
 import './CurrentWeather.css';
 
 const CurrentWeather = () => {
+
+  const current = new Date();
+  const date = `${current.getMonth()+1}/${current.getDate()}/${current.getFullYear()}`;
+
+  var today = new Date(),
+  time = today.getHours() + ':' + today.getMinutes();
+
+  // + ':' + today.getSeconds();
+
   const [forecast, setForecast] = useState('')
 
   useEffect(() => {
@@ -54,10 +63,15 @@ const CurrentWeather = () => {
         {
           forecast ? 
           <div className="weather-forecast">
-            <p>{tempsFahrenheit.currentTemp}° {forecast.weather[0].main}</p>
-            <p>Feels like {tempsFahrenheit.feelsLike}°</p>
-            <p>Min Temp: {tempsFahrenheit.minTemp}° | Max Temp: {tempsFahrenheit.maxTemp}°</p>
-            <p>Humidity: {forecast.main.humidity}%</p>
+            <div className="location-time-date">
+              <p>{forecast.name} | {time} | {date}</p>
+            </div>
+            <div className="weather-report">
+              <p>{tempsFahrenheit.currentTemp}° {forecast.weather[0].main}</p>
+              <p>Feels like {tempsFahrenheit.feelsLike}°</p>
+              <p>Min Temp: {tempsFahrenheit.minTemp}° | Max Temp: {tempsFahrenheit.maxTemp}°</p>
+              <p>Humidity: {forecast.main.humidity}%</p>
+            </div>
           </div> 
           : ''
           }
