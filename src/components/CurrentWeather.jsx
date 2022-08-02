@@ -35,13 +35,8 @@ const CurrentWeather = () => {
         </div>
         <div className="weather-forecast">
           <p>test</p>
-          { 
-            Object.keys(forecast).map((item, i) => (
-                <div className="travelcompany-input" key={i}>
-                    <span className="input-label">{ forecast.weather[0].main }</span>
-                </div>
-            ))
-          }  
+          <p>{forecast.visibility}</p>
+          <p>{forecast.main.temp}</p>
         </div>
       </div>
     </div>
