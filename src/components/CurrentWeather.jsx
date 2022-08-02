@@ -21,9 +21,6 @@ const CurrentWeather = () => {
     getWeather();
   }, []);
 
-  
- 
-
   // const toFahrenheit = (kel) => {
   //   const fahrenheit = (kel - 273.15) * 9 / 5 + 32;
   //   const fRounded = fahrenheit.toFixed(0);
@@ -32,7 +29,9 @@ const CurrentWeather = () => {
 
   return (
     <div className="container">
-     
+      <div className="weather-card">
+        <p>test</p>
+      </div>
     </div>
   )
 }
