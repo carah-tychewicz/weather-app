@@ -1,4 +1,5 @@
 import './LocaleDetails.css';
+
 const LocaleDetails = (props) => {
 
   const current = new Date();
@@ -12,8 +13,8 @@ const LocaleDetails = (props) => {
   let location = props.location.toUpperCase();
 
   return (
-    <div className="location-time-date">
-      <p>{location} | {time} | {date}</p>
+    <div className="locale-container">
+      <h6 className='location-date-time'>{location} | {time} | {date}</h6>
     </div>
   );
 };

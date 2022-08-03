@@ -4,11 +4,15 @@
   justify-content: center;
 }
 
+.title {
+  margin-bottom: 2rem;
+}
+
 .weather-card {
   background-color: rgba(255, 255, 255, 0.2);
   outline: solid 2px rgba(255, 255, 255, 1.0);
   border-radius: 20px;
-  height: 40rem;
+  height: auto;
   width: 30rem;
   margin-top: 10rem;
   margin-bottom: 10rem;
@@ -16,6 +20,36 @@
   padding-left: 1rem;
 }
 
-.weather-forecast {
-  
+.temperature {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.descriptor {
+  font-size: 2rem;
+}
+
+.temperature, .descriptor {
+  display: inline;
+  margin-right: 0.5rem;
+  font-weight: 100;
+}
+
+
+.current-temperature {
+  display: inline;
+}
+
+.feels {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.hi-lo-temp, .humidity {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.current-temperature, .hi-lo-temp, .humidity, .feels {
+  margin: 0rem;
 }

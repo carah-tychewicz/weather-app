@@ -50,17 +50,20 @@ const CurrentWeather = () => {
     <div className="container">
       <div className="weather-card">
         <div className="title">
-          <h3>Today's Forecast</h3>
+          <h2>Today's Forecast</h2>
         </div>
         {
           forecast ? 
           <div className="weather-forecast">
             <LocaleDetails location={forecast.name} />
-            <div className="weather-report">
-              <p>{tempsFahrenheit.currentTemp}° {forecast.weather[0].main}</p>
-              <p>Feels like {tempsFahrenheit.feelsLike}°</p>
-              <p>Min Temp: {tempsFahrenheit.minTemp}° | Max Temp: {tempsFahrenheit.maxTemp}°</p>
-              <p>Humidity: {forecast.main.humidity}%</p>
+            <div className="current-temperature">
+              <p className="temperature">{tempsFahrenheit.currentTemp}°</p>
+              <p className="descriptor">{forecast.weather[0].main}</p>
+            </div>
+            <div className="other-details">
+              <p className="feels">Feels like {tempsFahrenheit.feelsLike}°</p>
+              <p className="hi-lo-temp">High: {tempsFahrenheit.minTemp}° | Low: {tempsFahrenheit.maxTemp}°</p>
+              <p className="humidity">Humidity: {forecast.main.humidity}%</p>
             </div>
           </div> 
           : ''
