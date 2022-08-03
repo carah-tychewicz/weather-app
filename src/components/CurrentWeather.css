@@ -16,8 +16,7 @@
   width: 30rem;
   margin-top: 10rem;
   margin-bottom: 10rem;
-  padding-top: 1rem;
-  padding-left: 1rem;
+  padding: 1rem; 
 }
 
 .temperature {
@@ -52,4 +51,20 @@
 
 .current-temperature, .hi-lo-temp, .humidity, .feels {
   margin: 0rem;
+}
+
+@keyframes glowing {
+  from {text-shadow: 0 0 3px orangered;}
+  to {text-shadow: 0 0 10px orangered;}
+}
+
+.loading-text {
+  margin: 0;
+  color: antiquewhite;
+  font-size: 2rem;
+  text-align: center;
+  animation-name: glowing;
+  animation-duration: 500ms;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
