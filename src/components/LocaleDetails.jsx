@@ -9,9 +9,11 @@ const LocaleDetails = (props) => {
 
   // + ':' + today.getSeconds();
 
+  let location = props.location.toUpperCase();
+
   return (
     <div className="location-time-date">
-      <p>{props.location} | {time} | {date}</p>
+      <p>{location} | {time} | {date}</p>
     </div>
   );
 };
