@@ -1,0 +1,10 @@
+.loading-text {
+  margin: 0;
+  color: antiquewhite;
+  font-size: 2rem;
+  text-align: center;
+  animation-name: glowing;
+  animation-duration: 500ms;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
