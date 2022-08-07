@@ -2,7 +2,7 @@ import './VisualWeather.css';
 
 const VisualWeather = () => {
     return (
-        <div></div>
+        <div><p>test</p></div>
     )
 }
 
