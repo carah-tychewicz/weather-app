@@ -2,11 +2,8 @@ import { useEffect, useState } from "react";
 import { url } from '../config.js';
 import LocaleDetails from "./LocaleDetails.jsx";
 import './CurrentWeather.css';
-<<<<<<< HEAD
 import LoadingText from "./LoadingText.jsx";
-=======
 import VisualWeather from "./VisualWeather.jsx";
->>>>>>> cde1a9f722354ce058d990d60e8b2b480f7db12a
 
 const CurrentWeather = () => {
   const [forecast, setForecast] = useState('')
@@ -56,7 +53,6 @@ const CurrentWeather = () => {
     <div className="container">
       {
         !forecast ? 
-          // componentize this asap
           <LoadingText /> :
           // also component
           <div className="weather-card">
@@ -76,7 +72,7 @@ const CurrentWeather = () => {
               </div>
             </div>
             <div>
-              <VisualWeather />
+              <VisualWeather location={forecast.weather}/>
             </div>
           </div> 
         }

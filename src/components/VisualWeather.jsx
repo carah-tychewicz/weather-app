@@ -1,9 +1,18 @@
 import './VisualWeather.css';
 
-const VisualWeather = () => {
+const VisualWeather = (props) => {
+  if (props) {
+    console.log(props);
     return (
-        <div><p>test</p></div>
+      <div>
+        <p>Success</p>
+      </div>
+    );
+  } else {
+    return (
+      <div><p>Failure</p></div>
     )
+  }
 }
 
 export default VisualWeather;
