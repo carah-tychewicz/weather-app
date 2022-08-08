@@ -3,6 +3,7 @@ import { url } from '../config.js';
 import LocaleDetails from "./LocaleDetails.jsx";
 import './CurrentWeather.css';
 import LoadingText from "./LoadingText.jsx";
+import VisualWeather from "./VisualWeather.jsx";
 
 const CurrentWeather = () => {
   const [forecast, setForecast] = useState('')
@@ -52,13 +53,13 @@ const CurrentWeather = () => {
     <div className="container">
       {
         !forecast ? 
-          // componentize this asap
           <LoadingText /> :
           // also component
           <div className="weather-card">
             <div className="title">
               <h2>Today's Forecast</h2>
             </div>
+            <VisualWeather location={forecast.weather}/>
             <div className="weather-forecast">
               <LocaleDetails location={forecast.name} />
               <div className="current-temperature">
