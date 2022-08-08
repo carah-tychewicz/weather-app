@@ -2,7 +2,11 @@ import { useEffect, useState } from "react";
 import { url } from '../config.js';
 import LocaleDetails from "./LocaleDetails.jsx";
 import './CurrentWeather.css';
+<<<<<<< HEAD
 import LoadingText from "./LoadingText.jsx";
+=======
+import VisualWeather from "./VisualWeather.jsx";
+>>>>>>> cde1a9f722354ce058d990d60e8b2b480f7db12a
 
 const CurrentWeather = () => {
   const [forecast, setForecast] = useState('')
@@ -70,6 +74,9 @@ const CurrentWeather = () => {
                 <p className="hi-lo-temp">High: {tempsFahrenheit.minTemp}° | Low: {tempsFahrenheit.maxTemp}°</p>
                 <p className="humidity">Humidity: {forecast.main.humidity}%</p>
               </div>
+            </div>
+            <div>
+              <VisualWeather />
             </div>
           </div> 
         }
