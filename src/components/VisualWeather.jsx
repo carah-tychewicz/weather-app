@@ -29,7 +29,7 @@ const VisualWeather = (props) => {
     case "Rain":
       return (
         <div>
-          <p>Rain</p>
+          <FontAwesomeIcon icon="fa-solid fa-cloud-showers-heavy" />
         </div>
       )
     break;
@@ -37,6 +37,20 @@ const VisualWeather = (props) => {
       return (
         <div>
           <p>Drizzle</p>
+        </div>
+      )
+    break;
+    case "Thunderstorm":
+      return (
+        <div>
+          <p>Thunderstorm</p>
+        </div>
+      )
+    break;
+    case "Mist":
+      return (
+        <div>
+          <p>Mist</p>
         </div>
       )
     break;
