@@ -59,6 +59,7 @@ const CurrentWeather = () => {
             <div className="title">
               <h2>Today's Forecast</h2>
             </div>
+            <VisualWeather location={forecast.weather}/>
             <div className="weather-forecast">
               <LocaleDetails location={forecast.name} />
               <div className="current-temperature">
@@ -70,9 +71,6 @@ const CurrentWeather = () => {
                 <p className="hi-lo-temp">High: {tempsFahrenheit.minTemp}° | Low: {tempsFahrenheit.maxTemp}°</p>
                 <p className="humidity">Humidity: {forecast.main.humidity}%</p>
               </div>
-            </div>
-            <div>
-              <VisualWeather location={forecast.weather}/>
             </div>
           </div> 
         }

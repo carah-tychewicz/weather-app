@@ -5,8 +5,9 @@ const VisualWeather = (props) => {
   let icon = props.location[0].icon;
 
   return (
-    <div>
-      <img src={'http://openweathermap.org/img/wn/'+ icon +'@2x.png'} />
+    <div className='icon-container'>
+      <img className='icon' src={'http://openweathermap.org/img/wn/'+ icon +'@2x.png'} />
+      <p>{}</p>
     </div>
   )
 }
