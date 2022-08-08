@@ -2,72 +2,13 @@ import './VisualWeather.css';
 
 const VisualWeather = (props) => {
   console.log(props);
-  let weatherStatus = props.location[0].main;
+  let icon = props.location[0].icon;
 
-  switch(weatherStatus) {
-    case "Clouds":
-      return (
-        <div>
-          <p>Clouds</p>
-        </div>
-      )
-    break;
-    case "Clear":
-      return (
-        <div>
-          <p>Clear</p>
-        </div>
-      )
-    break;
-    case "Snow":
-      return (
-        <div>
-          <p>Snow</p>
-        </div>
-      )
-    break;
-    case "Rain":
-      return (
-        <div>
-          <FontAwesomeIcon icon="fa-solid fa-cloud-showers-heavy" />
-        </div>
-      )
-    break;
-    case "Drizzle":
-      return (
-        <div>
-          <p>Drizzle</p>
-        </div>
-      )
-    break;
-    case "Thunderstorm":
-      return (
-        <div>
-          <p>Thunderstorm</p>
-        </div>
-      )
-    break;
-    case "Mist":
-      return (
-        <div>
-          <p>Mist</p>
-        </div>
-      )
-    break;
-    case "Thunderstorm":
-      return (
-        <div>
-          <p>Thunderstorm</p>
-        </div>
-      )
-    break;
-    default:
-      return (
-        <div>
-          <p>Default</p>
-        </div>
-      )
-  }
+  return (
+    <div>
+      <img src={'http://openweathermap.org/img/wn/'+ icon +'@2x.png'} />
+    </div>
+  )
 }
 
 export default VisualWeather;
