@@ -68,7 +68,7 @@ const CurrentWeather = () => {
               </div>
               <div className="other-details">
                 <p className="feels">Feels like {tempsFahrenheit.feelsLike}°</p>
-                <p className="hi-lo-temp">High: {tempsFahrenheit.minTemp}° | Low: {tempsFahrenheit.maxTemp}°</p>
+                <p className="hi-lo-temp">High: {tempsFahrenheit.maxTemp}° | Low: {tempsFahrenheit.minTemp}°</p>
                 <p className="humidity">Humidity: {forecast.main.humidity}%</p>
               </div>
             </div>
